@@ -10,14 +10,17 @@ fetch(endpoint)
 
 
         data.forEach(photo => {
-            const {title, date, url} = photo
-            console.log(title, date, url);
+            const {id, title, date, url} = photo
+            console.log(id, title, date, url);
 
             const markup = `<div>
-                                <div class="card-photo bg-white px-3 pt-3 pb-4 position-relative">
+                                <div id="card-photo-${id}" class="card-photo bg-white px-3 pt-3 pb-4 position-relative">
                                     <figure class="mb-0">
-                                        <img class="mb-3" src="${url}" alt="">
-                                        <figcaption><p>${title}</p></figcaption>
+                                        <img class="mb-3" src="${url}" alt="${title}">
+                                        <figcaption>
+                                            <small class="photo-date text-secondary">${date}</small>
+                                            <p class="photo-title mb-0">${title}</p>
+                                        </figcaption>
                                     </figure> 
                                 </div>
                             </div>`

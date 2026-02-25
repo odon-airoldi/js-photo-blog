@@ -29,8 +29,13 @@ img {
 .card-photo {
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .3);
 
-    figcaption p {
-            font-family: "Edu TAS Beginner", cursive;
+    .photo-title {
+        font-family: "Edu TAS Beginner", cursive;
 
     }
+
+    .photo-date {
+        font-family: "Sometype Mono", monospace;
+    }
+
 }
