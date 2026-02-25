@@ -4,7 +4,7 @@ img {
 
 .header {
     background-image: url('../img/wall.png');
-    background-size: 33.333% auto;
+    background-size: 25% auto;
 
     h1 {
         font-family: "Edu TAS Beginner", cursive;
@@ -13,7 +13,7 @@ img {
 
 .main {
     background-image: url('../img/cork.png');
-    background-size: 33.333% auto;
+    background-size: 25% auto;
 }
 
 .card-photo::after {
@@ -26,6 +26,11 @@ img {
     transform: translateX(-50%);
 }
 
-figcaption p {
-    font-family: "Edu TAS Beginner", cursive;
+.card-photo {
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .3);
+
+    figcaption p {
+            font-family: "Edu TAS Beginner", cursive;
+
+    }
 }
