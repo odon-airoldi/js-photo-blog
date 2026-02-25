@@ -10,8 +10,11 @@ fetch(endpoint)
             const {id, title, date, url} = photo
             console.log(id, title, date, url);
 
-            const markup = `<div>
-                                <div id="card-photo-${id}" class="card-photo bg-white p-3 position-relative">
+            const col = document.createElement('div');
+            col.classList.add(`card-photo-${id}`)
+            row_el.appendChild(col)
+            
+            const markup = `<div class="card-photo bg-white p-3 position-relative">
                                     <figure class="mb-0">
                                         <img class="mb-3" src="${url}" alt="${title}">
                                         <figcaption>
@@ -19,12 +22,12 @@ fetch(endpoint)
                                             <p class="photo-title mb-0 fs-4 text-uppercase fw-bold lh-sm">${title}</p>
                                         </figcaption>
                                     </figure> 
-                                </div>
-                            </div>`
+                                </div>`
 
-            row_el.insertAdjacentHTML('beforeend', markup)
+            col.innerHTML = markup
+            // row_el.insertAdjacentHTML('beforeend', markup)
 
-            
+
         })
 
     })
