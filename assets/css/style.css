@@ -2,10 +2,13 @@ img {
     max-width: 100%;
 }
 
-
 .header {
     background-image: url('../img/wall.png');
     background-size: 33.333% auto;
+
+    h1 {
+        font-family: "Edu TAS Beginner", cursive;
+    }
 }
 
 .main {
