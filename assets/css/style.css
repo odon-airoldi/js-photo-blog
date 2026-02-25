@@ -1,0 +1,24 @@
+img {
+    max-width: 100%;
+}
+
+
+.header {
+    background-image: url('../img/wall.png');
+    background-size: 33.333% auto;
+}
+
+.main {
+    background-image: url('../img/cork.png');
+    background-size: 33.333% auto;
+}
+
+.card-photo::after {
+
+    content: url('../img/pin.svg');
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
