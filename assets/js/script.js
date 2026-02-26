@@ -28,6 +28,16 @@ fetch(endpoint)
     })
 
 
+
+const overlay_el = document.querySelector('.overlay');
+
+overlay_el.addEventListener('click', function(){
+
+    this.classList.add('d-none')
+
+});
+
+
     /*
 
     fetch(endpoint)
