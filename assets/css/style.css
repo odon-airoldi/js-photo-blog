@@ -16,7 +16,7 @@ img {
     background-size: 25% auto;
 }
 
-.card-photo::after {
+.row .card-photo::after {
 
     content: url('../img/pin.svg');
     display: block;
@@ -45,6 +45,12 @@ img {
 
 .overlay {
     background-color: rgba(0, 0, 0, .25);
+
+    .card-photo {
+        
+        max-width: 480px;
+
+    }
 }
 
 .close {

@@ -2,7 +2,9 @@ const endpoint = 'https://lanciweb.github.io/demo/api/pictures/'
 const row_el = document.querySelector('.row');
 
 
-
+    const overlay_el = document.querySelector('.overlay');
+    const overlay_content_el = document.querySelector('.overlay-content');
+    const close_el = document.querySelector('.close');
 
     fetch(endpoint)
     .then(res => res.json())
@@ -28,17 +30,19 @@ const row_el = document.querySelector('.row');
                             </div>`
 
             col.innerHTML = markup
+        
+            const card_el = document.getElementById(`card-photo-${id}`)
+
+            card_el.addEventListener('click', function(){
+
+                overlay_el.classList.remove('d-none')
+                overlay_content_el.innerHTML = markup
+
+            });
 
         })
 
-        myFunction();
-
     })
-
-
-
-const overlay_el = document.querySelector('.overlay');
-const close_el = document.querySelector('.close');
 
 
 close_el.addEventListener('click', function(){
@@ -46,19 +50,6 @@ close_el.addEventListener('click', function(){
     overlay_el.classList.add('d-none')
 
 });
-
-function myFunction() {
-
-    const card_el = document.getElementById('card-photo-1')
-    console.log(card_el)
-
-    card_el.addEventListener('click', function(){
-
-        overlay_el.classList.remove('d-none')
-
-    });
-
-}
 
 
 
