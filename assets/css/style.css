@@ -3,12 +3,14 @@ img {
 }
 
 .header {
+
     background-image: url('../img/wall.png');
     background-size: 25% auto;
 
     h1 {
         font-family: "Edu TAS Beginner", cursive;
     }
+
 }
 
 .main {
@@ -16,8 +18,25 @@ img {
     background-size: 25% auto;
 }
 
-.row .card-photo::after {
+.row .card-photo {
 
+    z-index: 0;
+    cursor: pointer;
+    transition: all .25s ease;
+
+    &:hover {
+        z-index: 1;
+        transform: scale(1.025) rotate(-10deg);
+
+        .card-content {
+            box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, .3);
+        }
+    }
+
+}
+
+
+.row .card-photo::after {
     content: url('../img/pin.svg');
     display: block;
     position: absolute;
@@ -29,6 +48,7 @@ img {
 .card-photo {
 
     .card-content {
+        transition: all .25s ease;
         box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .3);
     }
 
@@ -44,11 +64,13 @@ img {
 }
 
 .overlay {
+
     background-color: rgba(0, 0, 0, .25);
 
     .card-photo {
         
         max-width: 480px;
+
 
     }
 }
@@ -56,4 +78,5 @@ img {
 .close {
     width: 48px;
     height: 48px;
+    cursor: pointer;
 }

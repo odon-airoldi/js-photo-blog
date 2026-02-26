@@ -11,11 +11,11 @@ const row_el = document.querySelector('.row');
     .then(data => {
 
         data.forEach(photo => {
-            const {id, title, date, url} = photo
+            const {id, title, date, url} = photo;
 
-            const col = document.createElement('div');
-            col.id = `card-photo-${id}`
-            row_el.appendChild(col)
+            const card_photo_el = document.createElement('div');
+            card_photo_el.id = `card-photo-${id}`;
+            row_el.appendChild(card_photo_el);
             
             const markup = `<div class="card-photo position-relative">
                                 <div class="card-content bg-white p-3">
@@ -29,9 +29,9 @@ const row_el = document.querySelector('.row');
                                 </div>
                             </div>`
 
-            col.innerHTML = markup
+            card_photo_el.innerHTML = markup;
         
-            const card_el = document.getElementById(`card-photo-${id}`)
+            const card_el = document.getElementById(`card-photo-${id}`);
 
             card_el.addEventListener('click', function(){
 
@@ -40,14 +40,14 @@ const row_el = document.querySelector('.row');
 
             });
 
-        })
+        });
 
-    })
+    });
 
 
 close_el.addEventListener('click', function(){
 
-    overlay_el.classList.add('d-none')
+    overlay_el.classList.add('d-none');
 
 });
 
